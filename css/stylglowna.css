@@ -1,0 +1,392 @@
+:root {
+    --primary-color: rgb(0, 153, 255);
+    --secondary-color: rgb(255, 208, 0);
+    --dark-color: #333;
+    --light-color: #fff;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: #f4f4f4;
+    font-family: 'Work Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.fontbold { font-weight: bold;}
+
+/* Navabr */
+
+
+#navbar {
+    background: transparent;
+    width: 100vw;
+    height: 100px;
+    display:  flex;
+    justify-content:space-around;
+    align-items: center;
+    z-index: 3;
+}
+
+#navbar img {
+    height: 80%;
+}
+
+
+#navbar ul {
+    list-style: none;
+}
+
+#navbar ul li {
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+    position: relative;
+}
+
+#navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hide nested ul by default */
+
+#navbar ul li ul {
+    display: none;
+}
+
+
+
+
+#navbar ul li:hover,
+#navbar ul li a:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: #333;
+
+    transform: scale(1.1);
+    transition: all .2s;
+}
+
+section#navbar {
+    background-color: #333;
+}
+
+#bold-click {
+    font-weight: 800;
+}
+
+#thin-click {
+    font-weight: 300;
+}
+
+
+/* Show dropbar */
+
+#navbar ul li:hover ul {
+    display: block;
+    position: absolute;
+    padding: 1rem;
+    left: 0;
+    min-width: 200px;
+    margin-top: 1rem;
+    background: var(--secondary-color);
+}
+
+#navbar ul li:hover ul li {
+    color: #333;
+}
+
+
+/* Header */
+
+#header {
+    background: url(../imagine/zdjecia/klimatytul.jpg) no-repeat center center/cover;
+    width: 100vw;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    gap: 25%;
+}
+
+
+
+#header .quick-showcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    text-align: right;
+    padding: 0 10rem;
+    transform: translateY(300px);
+
+}
+
+#header .quick-showcase h1,
+#header .quick-showcase p {
+    color: #fff;
+    line-height: 1.2;
+    padding: 1rem 0;
+}
+
+#header .quick-showcase .btn {
+    width: 300px;
+    text-decoration: #333;
+    font-weight: 800;
+    transition: all .2s;
+    margin-left: auto;
+    margin-top: 1rem;
+    
+}
+
+#header .quick-showcase .btn:active {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+#header .quick-showcase {
+    transform: translateY(-10%);
+}
+
+/* Small box under header */
+
+.contact-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    gap: 3rem;
+    background: var(--secondary-color);
+    width: 70%;
+    margin: auto;
+    transform: translateY(-50%);
+}
+
+.contact-bar h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.contact-bar .btn {
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+/* Why us grid */
+
+.why-us {
+    display: grid; 
+    width: 70%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr ;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-us .left-side {
+    grid-column: 1 / span 2;
+
+}
+
+.why-us .left-side h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    padding: 2rem 0;
+}
+
+.why-us .left-side p {
+margin-bottom: 1rem;
+font-size: 1.3rem;
+}
+
+.why-us .left-side ul {
+    list-style: none;
+    line-height: 2;
+    font-size: 1.3rem;
+}
+
+.why-us .left-side ul li i {
+    color:  var(--secondary-color);
+}
+
+.why-us .right-side {
+    grid-column: 3 / span 4;
+    background: url(../imagine/zdjecia/zwyzka/zwyzka13.jpg) no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    transform: scale(.85) translateY(2rem);
+}
+
+.why-us .why-box {
+    margin: 3rem 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1.2rem;
+    gap: 1.2rem;
+    height: 320px;
+}
+
+
+/* Galery */
+
+#galery {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 5fr;
+    margin: 5rem auto;
+
+}
+
+#galery h1 {
+    grid-column: 1 / span 7;
+    font-weight: 600;
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+#galery ul {
+    font-size: 1.3rem;
+    list-style: none;
+}
+
+#galery ul li {
+    padding: .5rem 0;
+    cursor: pointer;
+}
+
+
+#galery img {
+    width: 100%;
+    height: auto;
+    margin: 1rem;
+}
+
+#galery .zwyzka-galery {
+    columns: 3;
+    column-gap: 2rem;
+    grid-column: 2 / span 6;
+}
+
+.quick-title {
+    width: 100vw;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.quick-title h1 {
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.quick-title p {
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+/* Galery */
+
+.gal-galery {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: auto;
+}
+
+.gal-galery h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.gal-galery .gal-photos {
+    columns: 3;
+    column-gap: 1rem;
+    margin: 2rem 0;
+}
+
+
+.gal-galery .gal-photos img {
+    width: 100%;
+    margin: .5rem 0;
+}
+
+/* Footer */
+
+
+footer { 
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: rgb(26, 26, 26);
+    grid-gap: 1rem;
+}
+
+footer .footer-box {
+    display: flex;
+    padding: 1rem 2rem;
+    line-height: 1.2;
+    border: solid 1px rgb(83, 83, 83);
+}
+
+footer .footer-box p {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+
+}
+
+footer .footer-social-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer .footer-social-icons a {
+    color: #fff;
+}
+
+footer .footer-social-icons p {
+    color: #fff;
+    padding: 1rem;
+}
+
+footer .scrol-up {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 2rem;
+}
+
+footer .footer-social-icons img {
+    width: 33%;
+}
+
+.footer-copyrights {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #0f0f0f;
+}
+
+
+
+
+
+
