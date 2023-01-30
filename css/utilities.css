@@ -9,7 +9,7 @@
 }
 
 .bg-dark {
-    background: rgb(26, 26, 26);
+    background: var(--dark-color);
     color: #fff;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .bg-light {
-    background: #fff;
+    background: var(--light-color);
     color: #111;
 }
 
